@@ -1,0 +1,35 @@
+doctype html
+html(
+	lang = "en"
+	dir = "ltr"
+)
+	head
+		meta(charset = "utf-8")
+		title platzi webpack test
+		link#mainCss(
+			rel = "stylesheet"
+			type = "text/css"
+			href = "../css/app.styl"
+		)
+	body
+		//- le comment
+		// le visible commment
+		| le ASD QWE
+
+		//- react hock element
+		#root
+
+		button#button.hide Presse moi
+
+		script#mainJs(
+			type = "text/javascript"
+			src = `js/${PROJECT_CODENAME}_app.js`
+		)
+		script#vendorsJs(
+			type = "text/javascript"
+			src = `js/${PROJECT_CODENAME}_vendor.js`
+		)
+		script#commonJs(
+			type = "text/javascript"
+			src = `js/${PROJECT_CODENAME}_async_shared.js`
+		)
