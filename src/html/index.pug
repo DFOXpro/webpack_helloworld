@@ -21,15 +21,15 @@ html(
 
 		button#button.hide Presse moi
 
-		script#mainJs(
+		script#commonJs(
 			type = "text/javascript"
-			src = `js/${PROJECT_CODENAME}_app.js`
+			src = `js/${PROJECT_CODENAME}_async_shared.js`
 		)
 		script#vendorsJs(
 			type = "text/javascript"
 			src = `js/${PROJECT_CODENAME}_vendor.js`
 		)
-		script#commonJs(
+		script#mainJs(
 			type = "text/javascript"
-			src = `js/${PROJECT_CODENAME}_async_shared.js`
+			src = `js/${PROJECT_CODENAME}_app.js`
 		)
