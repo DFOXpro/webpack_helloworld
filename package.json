@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-	"browserslist": "> 0.25%, not dead",
+  "browserslist": "> 0.25%, not dead",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dist": "rm dist -Rv; webpack",
-    "dev": "rm dist -Rv; webpack --config ./webpack.dev.js",
-    "wds": "rm dist -Rv; webpack-dev-server --config ./webpack.dev.js"
+    "dev": "rm www -Rv; webpack --config ./webpack.dev.js",
+    "dev:wds": "rm www -Rv; webpack-dev-server --config ./webpack.dev.js",
+    "dist:wds": "rm dist -Rv; webpack-dev-server"
   },
   "author": "",
   "license": "ISC",

@@ -22,18 +22,19 @@ async function test_ESNext_compativility() {
 	Asd.zxc();
 	a.qwe;
 
-	// Test let, const, fatArrow, Promise, async & await, fast object equals
+	// Test let, const, fatArrow, Promise, async & await
 	let y = await new Promise(resolve => {
 		setTimeout(() => {
 			resolve(';D');
 		}, 2000);
 	});
 	console.log(y); // prints after 2 seconds: ';D'
+
 	let $button = document.getElementById('button');
 	$button.addEventListener(
 		'click',
 		async ()=> {
-			// Test dynamic import
+			// Test dynamic import and fast object equals
 			const {B} = await import('./app/b.js');
 			B.zxc();
 			(new B).qwe;
