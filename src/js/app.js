@@ -62,12 +62,13 @@ function reactTest() {
 reactTest();
 
 // Test web and service workers
-function workersTest() {
+async function workersTest() {
 	if (window.Worker) {
-		const MyWebWorker = import("worker-loader?name=web_workers.js!./worker");
-		let worker = new MyWebWorker;
-		worker.postMessage("b");
-		worker.onmessage = (response) => {
+		const {MyWebWorker} = await import("./web_workers.js");
+		console.log(MyWebWorker);
+		let wWorker = new MyWebWorker();
+		wWorker.postMessage("b");
+		wWorker.onmessage = (response) => {
 			console.log('Web worker answer', response);
 		};
 	}

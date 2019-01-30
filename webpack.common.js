@@ -1,13 +1,24 @@
+const path = require('path');
 const PROJECT_CODENAME = 'zpwpp'; // Zorro Platzi Webpack Project
 const zorroWebpackRulesIndex = {
-	js: 0,
-	css: 1,
-	htmlIndex: 2,
-	htmlTemplates: 3,
+	jsWorkers: 0,
+	js: 1,
+	css: 2,
+	htmlIndex: 3,
+	// htmlTemplates: 4,
 }
 const zorroWebpackCommonConfigs = {
 	module: {
 		rules: [
+			{ // web/service workers
+				test: /_workers\.js$/,
+				use: [
+					{
+						loader: 'worker-loader',
+						options: { name: `js/${PROJECT_CODENAME}_[name].[hash].js` }
+					}
+				]
+			},
 			{ // old browsers compatibility layer
 				test: /\.js$/,
 				exclude: /(node_modules|bower_components)/,
@@ -102,15 +113,19 @@ const zorroWebpackCommonConfigs = {
 	entry: {
 		vendor: ['react', 'react-dom', 'babel-polyfill'],
 		app: './src/js/app.js',
-		web_worker: './src/js/web_workers.js',
-		service_worker: './src/js/service_workers.js',
+		// web_worker: './src/js/web_workers.js',
+		// service_worker: './src/js/service_workers.js',
 		index: './src/html/index.pug',
 	},
 	output: {
-		// path: path.resolve(__dirname, 'dist'),
+		path: path.resolve(__dirname, 'dist'),
 		filename: `js/${PROJECT_CODENAME}_[name].js`,
 		publicPath: '/',
 		chunkFilename: `js/${PROJECT_CODENAME}_async_[id].js`, // .[chunkhash]
+	},
+	devServer: {
+		open: false,
+		writeToDisk: true
 	}
 }
 
