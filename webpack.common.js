@@ -110,10 +110,10 @@ const zorroWebpackCommonConfigs = {
 		}
 	},
 	entry: {
-		vendor: ['react', 'react-dom', 'babel-polyfill'],
+		vendor: ['react', 'react-dom'], // , 'babel-polyfill'],
 		app: './src/js/app.js',
-		// web_worker: './src/js/web_workers.js',
-		// service_worker: './src/js/service_workers.js',
+		// web_worker: './src/js/web_workers.js', // compiled as async
+		// service_worker: './src/js/service_workers.js', // compiled as async
 		index: './src/html/index.pug',
 	},
 	output: {
