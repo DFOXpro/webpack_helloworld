@@ -6,10 +6,10 @@
   "browserslist": "> 0.25%, not dead",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dist": "rm dist -Rv; webpack",
+    "dist": "rm dist -Rv; NODE_ENV=production; webpack",
     "dev": "rm www -Rv; webpack --config ./webpack.dev.js",
     "dev:wds": "rm www -Rv; webpack-dev-server --config ./webpack.dev.js",
-    "dist:wds": "rm dist -Rv; webpack-dev-server"
+    "dist:wds": "rm dist -Rv; NODE_ENV=production; webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
