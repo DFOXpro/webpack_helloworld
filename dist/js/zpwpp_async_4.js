@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[4],{12:function(o,n,c){"use strict";c.r(n),c.d(n,"B",function(){return e});class e{get qwe(){return console.log("B.qwe"),"XD"}static zxc(){return console.log("B.zxc"),".|."}}console.log(`From B ${e.zxc()}`)}}]);
