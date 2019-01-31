@@ -44,9 +44,7 @@ const zorroWebpackCommonConfigs = {
 			{ // CSS Stylus loader
 				test: /\.styl$/,
 				use: [
-					`file-loader?name=css/${PROJECT_CODENAME}_[name].[hash].css`, // dev
-					// `'file-loader?name=css/${cssName}.css'`,
-					// 'file-loader?name=css/[name].[hash].css', // prod
+					`file-loader?name=css/${PROJECT_CODENAME}_[name].[hash].css`,
 					'extract-loader',
 					'css-loader',
 					'stylus-loader'
