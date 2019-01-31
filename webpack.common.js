@@ -61,6 +61,7 @@ const zorroWebpackCommonConfigs = {
 						loader: 'html-loader',
 						options: {
 							minimize: true,
+							conservativeCollapse: false,
 							attrs: [
 								// 'script:src',
 								'img:src',
