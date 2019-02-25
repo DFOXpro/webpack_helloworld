@@ -29,4 +29,4 @@ Cosas extras al curso:
 * `npm run dev` Genera los archivos para desarrollo
 * `npm run dev:watch` Genera los archivos para desarrollo y se mantiene en modo watch
 
-Las carpetas `dist` y `www` tienen respectivamente los archivos generados para producción y desarrollo, estos archivos no se editaron manualmente.
+Las carpetas [`dist`](https://github.com/DFOXpro/webpack_helloworld/tree/master/dist) y [`www`](https://github.com/DFOXpro/webpack_helloworld/tree/master/www) tienen respectivamente los archivos generados para producción y desarrollo, estos archivos no se editaron manualmente.
